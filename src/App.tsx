@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
-import Star from "./components/Star";
+import Rating from "./components/Rating";
+import Accordion from "./components/Accordion";
 
 const App = () => {
   return (<div>
       This is Component
-      <Star />
-      <Star />
-      <Star />
-      <Star />
-      <Star />
+      <Rating />
+      <Accordion />
     </div>
   );
 }
