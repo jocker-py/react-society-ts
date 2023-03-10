@@ -1,14 +1,14 @@
 import React from 'react';
 
-function Rating(){
+function Rating(props:{value:number}){
   return (
-    <>
-    <Star />
-    <Star />
-    <Star />
-    <Star />
-    <Star />
-  </>)
+    <div>
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+    </div>)
 }
 
 function Star(){
