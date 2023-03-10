@@ -7,7 +7,7 @@ const App = () => {
   return (<div>
       This is Component
       <Rating />
-      <Accordion />
+      <Accordion title={"Меню"}/>
     </div>
   );
 }
