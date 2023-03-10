@@ -13,7 +13,10 @@ const App = () => {
   );
 }
 
-function AppTitle(props:{title:string}){
+type AppTitleProps = {
+ title: string
+}
+function AppTitle(props:AppTitleProps){
   return <h1>{props.title}</h1>
 }
 
