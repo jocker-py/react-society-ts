@@ -6,11 +6,15 @@ import Accordion from "./components/Accordion/Accordion";
 
 const App = () => {
   return (<div>
-      This is Component
+      <AppTitle title={"This is Component"}/>
       <Rating value={3}/>
       <Accordion title={"Меню"}/>
     </div>
   );
+}
+
+function AppTitle(props:{title:string}){
+  return <h1>{props.title}</h1>
 }
 
 export default App;
