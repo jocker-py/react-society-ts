@@ -7,8 +7,10 @@ import Accordion from "./components/Accordion/Accordion";
 const App = () => {
   return (<div>
       <AppTitle title={"This is Component"}/>
+      <Accordion title={"Menu"}/>
       <Rating value={3}/>
-      <Accordion title={"Меню"}/>
+      <Accordion title={"Users"}/>
+      <Rating value={0}/>
     </div>
   );
 }
