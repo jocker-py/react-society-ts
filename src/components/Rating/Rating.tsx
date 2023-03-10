@@ -1,6 +1,9 @@
 import React from 'react';
 
-function Rating(props:{value : number}){
+type RatingPropsType = {
+  value: number;
+}
+function Rating(props:RatingPropsType){
   return (
     <div>
       {
@@ -14,7 +17,10 @@ function Rating(props:{value : number}){
     </div>)
 }
 
-function Star(props:{selected: boolean}){
+type StarPropsType = {
+  selected: boolean;
+}
+function Star(props:StarPropsType){
   return(<span>{props.selected ? <b>star </b> : 'star '}</span>)
 }
 
