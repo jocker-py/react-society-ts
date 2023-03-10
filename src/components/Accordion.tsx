@@ -1,5 +1,4 @@
 import React from 'react';
-import AccordionTitle from "./AccordionTitle";
 
 function Accordion(props:{title: string}){
   return(
@@ -16,6 +15,10 @@ function AccordionBody(){
     <li>2</li>
     <li>3</li>
   </ul>)
+}
+
+function AccordionTitle(props:{title:string}){
+  return(<h3>{props.title}</h3>)
 }
 
 export default Accordion;
