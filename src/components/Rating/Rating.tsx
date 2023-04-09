@@ -1,15 +1,17 @@
 import React from 'react';
+import Star from "./Star";
 
-type RatingPropsType = {
+export type RatingPropsType = {
   value: number;
 }
-function Rating(props:RatingPropsType){
+
+function Rating({value}:RatingPropsType){
   return (
     <div>
       {
         [...new Array(5)]
           .map((star, idx) => {
-            return idx < props.value ?
+            return idx < value ?
               <Star selected={true} /> :
               <Star selected={false} />
           })
@@ -17,11 +19,6 @@ function Rating(props:RatingPropsType){
     </div>)
 }
 
-type StarPropsType = {
-  selected: boolean;
-}
-function Star(props:StarPropsType){
-  return(<span>{props.selected ? <b>star </b> : 'star '}</span>)
-}
+
 
 export default Rating;
