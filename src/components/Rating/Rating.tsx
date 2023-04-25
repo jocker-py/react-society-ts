@@ -5,7 +5,7 @@ export type RatingPropsType = {
   value: number;
 }
 
-function Rating({value}:RatingPropsType){
+export function Rating({value}:RatingPropsType){
   return (
     <div>
       {
@@ -19,6 +19,3 @@ function Rating({value}:RatingPropsType){
     </div>)
 }
 
-
-
-export default Rating;

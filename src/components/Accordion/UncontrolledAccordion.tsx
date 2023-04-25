@@ -3,7 +3,7 @@ import {AccordionPropsType} from "./Accordion";
 import AccordionTitle from "./AccordionTitle";
 import AccordionBody from "./AccordionBody";
 
-function UncontrolledAccordion({title, collapsed}:AccordionPropsType){
+export function UncontrolledAccordion({title, collapsed}:AccordionPropsType){
   const [collaps, setCollaps] = useState(collapsed);
   const toggleCollaps = () => setCollaps(!collaps);
   return(
@@ -13,5 +13,3 @@ function UncontrolledAccordion({title, collapsed}:AccordionPropsType){
     </div>
   )
 }
-
-export default UncontrolledAccordion;

@@ -7,7 +7,7 @@ export type AccordionPropsType = {
   collapsed: boolean;
 }
 
-function Accordion(props:AccordionPropsType){
+export function Accordion(props:AccordionPropsType){
   return(
     <div>
       <AccordionTitle title={props.title}/>
@@ -15,8 +15,3 @@ function Accordion(props:AccordionPropsType){
     </div>
   )
 }
-
-
-
-
-export default Accordion;

@@ -2,7 +2,7 @@ import React, {FC, useState} from "react";
 import Star from "./Star";
 import {RatingPropsType} from "./Rating";
 
-const UncontrolledRating : FC<RatingPropsType> = ({value}) => {
+export const UncontrolledRating : FC<RatingPropsType> = ({value}) => {
   const [rate, setRate] = useState(value);
   const toggleRating = (value: number) => {
     setRate(value)
@@ -20,6 +20,3 @@ const UncontrolledRating : FC<RatingPropsType> = ({value}) => {
     </div>)
 }
 
-
-
-export default UncontrolledRating;
