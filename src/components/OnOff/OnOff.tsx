@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import s from "./OnOff.module.css";
 
-export const OnOff = () => {
+const OnOff = () => {
   const [on, setOn] = useState(false);
   const styleOff = on ? `${s.button} ${s.off}` : `${s.button} ${s.off} ${s.active}`;
   const styleOn = on ? `${s.button} ${s.on} ${s.active}` : `${s.button} ${s.on}`;
@@ -17,3 +17,5 @@ export const OnOff = () => {
     </div>
   );
 };
+
+export default React.memo(OnOff);

@@ -14,5 +14,5 @@ const Star = ({selected, callback}:StarPropsType) => {
          onClick={() => callback && callback()}/>)
 }
 
-export default Star;
+export default React.memo(Star);
 

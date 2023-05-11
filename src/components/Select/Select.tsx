@@ -74,4 +74,4 @@ const Select: FC<SelectPropsType> = ({value, onChange, items}) => {
 };
 
 
-export default Select;
+export default React.memo(Select);

@@ -13,5 +13,5 @@ const AccordionBody: FC<AccordionBodyPropsType> = ({collapsed}) => {
       </ul> : <ul/>
 };
 
-export default AccordionBody;
+export default React.memo(AccordionBody);
 

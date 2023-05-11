@@ -14,4 +14,4 @@ const AccordionTitle: FC<AccordionTitlePropsType> = ({title, callback}) => {
   );
 };
 
-export default AccordionTitle;
+export default React.memo(AccordionTitle);

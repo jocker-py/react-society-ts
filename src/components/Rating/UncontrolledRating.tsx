@@ -2,7 +2,7 @@ import React, {FC, useState} from "react";
 import Star from "./Star";
 import {RatingPropsType} from "./Rating";
 
-export const UncontrolledRating : FC<RatingPropsType> = ({value}) => {
+const UncontrolledRating : FC<RatingPropsType> = ({value}) => {
   const [rate, setRate] = useState(value);
   const toggleRating = (value: number) => {
     setRate(value)
@@ -19,4 +19,6 @@ export const UncontrolledRating : FC<RatingPropsType> = ({value}) => {
       }
     </div>)
 }
+
+export default React.memo(UncontrolledRating);
 

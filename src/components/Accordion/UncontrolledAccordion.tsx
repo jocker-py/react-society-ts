@@ -13,3 +13,5 @@ export function UncontrolledAccordion({title, collapsed}:AccordionPropsType){
     </div>
   )
 }
+
+export default React.memo(UncontrolledAccordion);

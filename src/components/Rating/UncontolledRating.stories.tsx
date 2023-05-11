@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {UncontrolledRating} from "./UncontrolledRating";
+import UncontrolledRating from "./UncontrolledRating";
 
 
 const meta: Meta<typeof UncontrolledRating> = {

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import {userEvent, within} from "@storybook/testing-library";
-import {UncontrolledAccordion} from "./UncontrolledAccordion";
+import UncontrolledAccordion from "./UncontrolledAccordion";
 
 
 const meta: Meta<typeof UncontrolledAccordion> = {

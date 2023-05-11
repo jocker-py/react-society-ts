@@ -5,7 +5,7 @@ export type RatingPropsType = {
   value: number;
 }
 
-export function Rating({value}:RatingPropsType){
+function Rating({value}:RatingPropsType){
   return (
     <div>
       {
@@ -19,3 +19,4 @@ export function Rating({value}:RatingPropsType){
     </div>)
 }
 
+export default React.memo(Rating);
