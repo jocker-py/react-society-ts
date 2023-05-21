@@ -12,9 +12,10 @@ type SelectPropsType = {
   value: any
   onChange: (value: any) => void
   items: Array<ItemType>
+  children?: React.ReactNode;
 }
 
-const Select: FC<SelectPropsType> = ({value, onChange, items}) => {
+const Select: FC<SelectPropsType> = ({value, onChange, items, children}) => {
   const [state, dispatch] = useReducer(reducer, {
     active: false,
     hovered: value,
@@ -44,6 +45,7 @@ const Select: FC<SelectPropsType> = ({value, onChange, items}) => {
   }, [value]);
   return (
     <>
+      <h3>{children}</h3>
       <div className={s.container} onClick={toggleSelect}>
         <div className={s.select} onKeyUp={onKeyUp} tabIndex={0}>
           <span className={s.title}>{`${hoveredElement ? hoveredElement.title : ""}`}</span>

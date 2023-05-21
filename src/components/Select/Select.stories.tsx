@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 import {action} from "@storybook/addon-actions";
 import Select from "./Select";
 import {Meta, StoryObj} from "@storybook/react";
@@ -93,5 +93,65 @@ export const ChooseSelect = () => {
     },
   ]
   return <Select onChange={setValue} value={value} items={items}/>
+}
+
+export const SelectWithMemo = () => {
+  const [value, setValue] = useState('');
+  const cities = [{
+    value: '1',
+    title: 'Minsk',
+    country: 'Belarus',
+    population: 1975000,
+  }, {
+    value: '2',
+    title: 'Grodno',
+    country: 'Belarus',
+    population: 368000,
+  },{
+    value: '3',
+    title: 'Gomel',
+    country: 'Belarus',
+    population: 508000,
+  }, {
+    value: '4',
+    title: 'Moscow',
+    country: 'Russia',
+    population: 11980000,
+  }, {
+    value: '5',
+    title: 'St. Petersburg',
+    country: 'Russia',
+    population: 5600000,
+  }, {
+    value: '6',
+    title: 'Krasnoyarsk',
+    country: 'Russia',
+    population: 1067000,
+  }, {
+    value: '7',
+    title: 'Kiev',
+    country: 'Ukraine',
+    population: 2884000,
+  }, {
+    value: '8',
+    title: 'Odessa',
+    country: 'Ukraine',
+    population: 993000,
+  }, {
+    value: '9',
+    title: 'Lvov',
+    country: 'Ukraine',
+    population: 721000,
+  }]
+
+  const citiesWithK = useMemo(() => cities.filter(c => c.title.toLowerCase().includes('k')),[cities]);
+  const citiesOfBelarus = useMemo(() => cities.filter(c => c.country === "Belarus"),[cities]);
+  const bigCities = useMemo(() => cities.filter(c => c.population >= 1000000),[cities]);
+
+  return <>
+    <Select onChange={setValue} value={value} items={citiesWithK}>Города с буквой к</Select>
+    <Select onChange={setValue} value={value} items={citiesOfBelarus}>Города Беларуси</Select>
+    <Select onChange={setValue} value={value} items={bigCities}>Города с население больше 1млн людей</Select>
+  </>
 }
 export default meta
